@@ -48,6 +48,25 @@ app.post("/register",async (req,res)=>{
 app.get("/login",(req,res)=>{
     res.render("login");
 })
+
+app.post("/login",async (req,res)=>{
+    try{
+        const email = req.body.email;
+        const password = req.body.password;
+
+        const userEmail = await Employee.findOne({email:email});
+        
+        // console.log(userEmail,userEmail.password);
+        if(userEmail.password === password){
+            res.status(201).send("You are successfully logged in. ")
+        }else{
+            res.send("emailid or password doesn't matched.")
+        }
+    }catch(e){
+        res.status(500).send(e)
+    }
+})
+
 app.listen(port,()=>{
     console.log(`Connection successfull at port ${port}`);
 })
