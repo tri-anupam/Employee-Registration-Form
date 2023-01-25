@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/app.js -e js,ejs",
-    "dev": "nodemon src/app.js -e js,ejs"
+    "start": "node src/app.js -e js,ejs,css",
+    "dev": "nodemon src/app.js -e js,ejs,css"
   },
   "keywords": [],
   "author": "Anupam Tripathi",

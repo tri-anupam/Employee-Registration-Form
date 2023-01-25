@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/head.ejs');%>
+    <title>Registration Page</title>
+</head>
+<body>
+    <h1>Employee Registration Form</h1>
+    <br>
+    <form action="/register" method="post">
+        <label>First Name*:  </label>
+        <input type="text" placeholder="First Name" value="" name="firstname" required/><br>
+        <label>Last Name*:  </label>
+        <input type="text" placeholder="Last Name" value="" name="lastname" required/><br>
+        <label>Email*:  </label>
+        <input type="email" placeholder="Your Email" value="" name="email" required/><br>
+        <label>Phone No.:  </label>
+        <input type="number" minlength="10" maxlength="10" placeholder="Phoneno." value="" name="phone" required/><br>
+        <label>Gender:  </label>
+        <input type="radio" name="gender" value="male" checked/>
+        <span>Male</span>
+        <input type="radio" name="gender" value="female">
+        <span>Female</span><br>
+        <label>Your age*:  </label>
+        <input type="number" min="18" max="56" placeholder="Enter your age" value="" name="age" required/><br>
+        <label>Your Department:</label>
+        <select name="department" id="department">
+            <option value="techd">Tech Department</option>
+            <option value="finand">Financial Department</option>
+            <option value="hrd">HR Department</option>
+        </select><br>
+        <label>Password*:  </label>
+        <input type="password" placeholder="Password" value="" name="password" required/><br>
+        <label>Confirm Password*:  </label>
+        <input type="password" placeholder="Confirm Password" value="" name="confirmpassword" required/><br>
+        <input type="submit" value="register">
+    </form>
+</body>
+</html>

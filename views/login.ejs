@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/head.ejs');%>
+    <title>Document</title>
+</head>
+<body>
+    <h1>You are successfully registered </h1>
+    <br>
+    <h3>Please login your self</h3>
+    <form action="/login" method="post">
+        <label>Email*:  </label>
+        <input type="email" placeholder="Your Email" value="" name="email" required/><br>
+        <label>Password*:  </label>
+        <input type="password" placeholder="Password" value="" name="password" required/><br>
+        <input type="submit" value="login">
+    </form>
+</body>
+</html>
