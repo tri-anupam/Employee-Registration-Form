@@ -91,6 +91,9 @@ const jwt = require("jsonwebtoken")
 const createToken = async() =>{
     const token = await jwt.sign({_id:"63d689e5a5c5f37aa9d82cd7"}, "anupam234wertyhb678ujht54chtyr79kih8")
     console.log(token);
+
+    const userVer = await jwt.verify(token,"anupam234wertyhb678ujht54chtyr79kih8")
+    console.log(userVer);
 }
 createToken()
 
